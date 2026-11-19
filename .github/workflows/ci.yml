@@ -1,0 +1,41 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate manifests
+        run: scripts/validate-manifests.sh
+
+      # The private denylist (internal service, repo and team names) is a
+      # repository secret. Secrets are not exposed to pull requests from forks,
+      # so external PRs get the built-in patterns and maintainers re-run the
+      # full check after merge.
+      - name: Leak guard
+        env:
+          LEAK_DENYLIST: ${{ secrets.LEAK_DENYLIST }}
+        run: |
+          if [ -n "$LEAK_DENYLIST" ]; then
+            printf '%s\n' "$LEAK_DENYLIST" > "$RUNNER_TEMP/denylist"
+            export LEAK_DENYLIST_FILE="$RUNNER_TEMP/denylist"
+          fi
+          scripts/check-leaks.sh
+
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: gitleaks
+        run: docker run --rm -v "$PWD:/repo" zricethezav/gitleaks:v8.21.2 detect --source /repo --redact --verbose

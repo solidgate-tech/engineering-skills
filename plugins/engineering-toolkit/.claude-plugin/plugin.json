@@ -1,0 +1,9 @@
+{
+  "name": "engineering-toolkit",
+  "description": "Engineering practice in the repo: ADR and design-document authoring that interviews you one decision at a time, setup of folders and AGENTS.md rules for AI artifacts (plans, specs, ideas) with migration of existing records.",
+  "version": "1.6.0",
+  "author": {
+    "name": "Nikita Popov"
+  },
+  "license": "Apache-2.0"
+}

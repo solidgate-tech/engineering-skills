@@ -1,0 +1,9 @@
+{
+  "name": "nodejs-toolkit",
+  "description": "Fixes pnpm 12 audit vulnerabilities in a fixed order — drop, update, override, ignore — after first re-checking whether existing overrides and ignores are still needed. Settings go to pnpm-workspace.yaml; ignores by GHSA.",
+  "version": "2.0.0",
+  "author": {
+    "name": "Ihor Huliashchyi"
+  },
+  "license": "Apache-2.0"
+}

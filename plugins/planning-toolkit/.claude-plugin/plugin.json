@@ -1,0 +1,9 @@
+{
+  "name": "planning-toolkit",
+  "description": "Problem-to-announcement planning for engineering teams: IF–THEN–BECAUSE hypotheses tied to DORA, SPACE, security or product metrics, lean milestone roadmaps, critics that hold both to the same rules, and contributor-facing Slack posts for shipped platform changes.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Nikita Popov"
+  },
+  "license": "Apache-2.0"
+}

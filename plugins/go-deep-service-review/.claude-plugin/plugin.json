@@ -1,0 +1,9 @@
+{
+  "name": "go-deep-service-review",
+  "description": "Multi-agent review of a Go service for a closed set of production defects: context propagation, IO without timeouts, decisions on untyped errors, unchecked batch partial failures (e.g. SQS), resource lifecycle (tx rollback, rows.Err, unclosed bodies/rows/readers), goroutines that cannot stop, app setup init/close order, SQL write pitfalls. You pick the checks; every finding carries its verification evidence.",
+  "version": "2.0.0",
+  "author": {
+    "name": "Artem Polubok"
+  },
+  "license": "Apache-2.0"
+}

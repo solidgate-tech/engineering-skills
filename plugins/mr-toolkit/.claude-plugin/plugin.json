@@ -1,0 +1,9 @@
+{
+  "name": "mr-toolkit",
+  "description": "The whole GitLab merge-request loop from your terminal. /mr-inbox analyzes every MR that needs you in parallel, auto-fixes the safe parts and gives you one decision screen; /mr-review writes a risk brief with a gated auto-approve; /mr-create opens an MR with a reviewer-focused description; /mr-deliver drives an MR to merge; /mr-unblock resolves what blocks a merge; /mr-split turns a big change into a git-spice stack; /mr-nudge DMs reviewers; /mr-to-review and /mr-ready show your queues.",
+  "version": "1.14.0",
+  "author": {
+    "name": "Max Baginskiy"
+  },
+  "license": "Apache-2.0"
+}

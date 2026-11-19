@@ -1,0 +1,105 @@
+{
+  "name": "solidgate-engineering",
+  "owner": {
+    "name": "Solidgate",
+    "url": "https://solidgate.com"
+  },
+  "metadata": {
+    "description": "Agent skills Solidgate engineers use every day: GitLab MR workflow, Go service review, ADRs and design docs, planning, pnpm audit fixes.",
+    "version": "0.1.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "mr-toolkit",
+      "source": "./plugins/mr-toolkit",
+      "description": "The whole GitLab merge-request loop from your terminal. /mr-inbox analyzes every MR that needs you in parallel, auto-fixes the safe parts and gives you one decision screen; /mr-review writes a risk brief with a gated auto-approve; /mr-create opens an MR with a reviewer-focused description; /mr-deliver drives an MR to merge; /mr-unblock resolves what blocks a merge; /mr-split turns a big change into a git-spice stack; /mr-nudge DMs reviewers; /mr-to-review and /mr-ready show your queues.",
+      "version": "1.14.0",
+      "license": "Apache-2.0",
+      "author": {
+        "name": "Max Baginskiy"
+      },
+      "category": "automation",
+      "tags": [
+        "gitlab",
+        "merge-requests",
+        "code-review",
+        "slack",
+        "git-spice",
+        "automation"
+      ]
+    },
+    {
+      "name": "go-deep-service-review",
+      "source": "./plugins/go-deep-service-review",
+      "description": "Multi-agent review of a Go service for a closed set of production defects: context propagation, IO without timeouts, decisions on untyped errors, unchecked batch partial failures (e.g. SQS), resource lifecycle (tx rollback, rows.Err, unclosed bodies/rows/readers), goroutines that cannot stop, app setup init/close order, SQL write pitfalls. You pick the checks; every finding carries its verification evidence.",
+      "version": "2.0.0",
+      "license": "Apache-2.0",
+      "author": {
+        "name": "Artem Polubok"
+      },
+      "category": "backend",
+      "tags": [
+        "go",
+        "golang",
+        "code-review",
+        "multi-agent",
+        "reliability"
+      ]
+    },
+    {
+      "name": "engineering-toolkit",
+      "source": "./plugins/engineering-toolkit",
+      "description": "Engineering practice in the repo: ADR and design-document authoring that interviews you one decision at a time, setup of folders and AGENTS.md rules for AI artifacts (plans, specs, ideas) with migration of existing records.",
+      "version": "1.6.0",
+      "license": "Apache-2.0",
+      "author": {
+        "name": "Nikita Popov"
+      },
+      "category": "engineering",
+      "tags": [
+        "adr",
+        "design-doc",
+        "architecture",
+        "documentation"
+      ]
+    },
+    {
+      "name": "nodejs-toolkit",
+      "source": "./plugins/nodejs-toolkit",
+      "description": "Fixes pnpm 12 audit vulnerabilities in a fixed order — drop, update, override, ignore — after first re-checking whether existing overrides and ignores are still needed. Settings go to pnpm-workspace.yaml; ignores by GHSA.",
+      "version": "2.0.0",
+      "license": "Apache-2.0",
+      "author": {
+        "name": "Ihor Huliashchyi"
+      },
+      "category": "backend",
+      "tags": [
+        "nodejs",
+        "pnpm",
+        "security",
+        "audit",
+        "dependencies"
+      ]
+    },
+    {
+      "name": "planning-toolkit",
+      "source": "./plugins/planning-toolkit",
+      "description": "Problem-to-announcement planning for engineering teams: IF–THEN–BECAUSE hypotheses tied to DORA, SPACE, security or product metrics, lean milestone roadmaps, critics that hold both to the same rules, and contributor-facing Slack posts for shipped platform changes.",
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "author": {
+        "name": "Nikita Popov"
+      },
+      "category": "productivity",
+      "tags": [
+        "planning",
+        "roadmap",
+        "hypotheses",
+        "dora",
+        "space",
+        "announcements"
+      ]
+    }
+  ]
+}
